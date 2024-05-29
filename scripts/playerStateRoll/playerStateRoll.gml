@@ -17,4 +17,9 @@ function playerStateRoll(){
 	if (moveDistanceRemaining <= 0){
 		state = playerStateFree;
 	}
+	
+	if ( _collided ){
+		state = playerStateFree;
+		screenShake(3, 30);
+	}
 }
