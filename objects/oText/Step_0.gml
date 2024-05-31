@@ -17,6 +17,11 @@ if (keyboard_check_pressed(vk_space)){
 					ticket --;
 				}
 			}
+			else{
+				with(oPlayer){
+					state = lastState;
+				}
+			}
 		}
 		else{
 			if(textProgress > 2){
