@@ -11,6 +11,12 @@ if (keyboard_check_pressed(vk_space)){
 	var _messageLenght = string_length(message){
 		if (textProgress >= _messageLenght){
 			instance_destroy();
+			
+			if(instance_exists(oTextQueued)){
+				with(oTextQueued){
+					ticket --;
+				}
+			}
 		}
 		else{
 			if(textProgress > 2){

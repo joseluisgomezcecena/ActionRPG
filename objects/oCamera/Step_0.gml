@@ -11,8 +11,16 @@ if (instance_exists(follow)){
 }
 
 //update position
-x += (xTo - x) /15;
-y += (yTo - y)/15;
+//x += (xTo - x) /5;
+//y += (yTo - y)/5;
+
+// Easing factor
+var ease = 0.8;
+
+// Update position with easing
+x += (xTo - x) * ease;
+y += (yTo - y) * ease;
+
 
 
 //keep camera center inside room.
